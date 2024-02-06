@@ -18,22 +18,20 @@ const noModes = [
   "Ok, no te presionaré más",
 ];
 const imgModes = [
-  "assets/1.gif",
-  "assets/2.gif",
-  "assets/3.gif",
-  "assets/4.gif",
-  "assets/5.gif",
-  "assets/6.gif",
-  "assets/7.gif",
-  "assets/8.gif",
-  "assets/9.gif",
+  "assets/personalized/1.webp",
+  "assets/personalized/2.webp",
+  "assets/personalized/3.webp",
+  "assets/personalized/4.webp",
+  "assets/personalized/5.webp",
+  "assets/personalized/6.webp",
 ];
 const siButton = document.getElementById("siBtn");
-let siTextSize = 1; // aumenta en 16 cada vez que se presiona el botón de no
 const noButton = document.getElementById("noBtn");
 const img = document.getElementById("img-question");
 let noIndex = 1;
 let imgIndex = 1;
+let siTextSize = 1;
+
 noButton.addEventListener("click", () => {
   noButton.textContent = noModes[noIndex];
   img.src = imgModes[imgIndex];
@@ -41,6 +39,13 @@ noButton.addEventListener("click", () => {
   imgIndex = (imgIndex + 1) % imgModes.length;
   siTextSize += 1;
   siButton.style.fontSize = `${siTextSize}rem`;
+  if (siTextSize > 3) {
+    siButton.style.padding = "8px 32px";
+  }
+});
+
+siButton.addEventListener("click", () => {
+  alert("¡Gracias! 😊");
 });
 
 // Dark mode
