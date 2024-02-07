@@ -23,8 +23,9 @@ const imgModes = [
   "assets/personalized/3.webp",
   "assets/personalized/4.webp",
   "assets/personalized/5.webp",
-  "assets/personalized/6.webp",
 ];
+const noContainer = document.getElementById("container-no");
+const siContainer = document.getElementById("container-si");
 const siButton = document.getElementById("siBtn");
 const noButton = document.getElementById("noBtn");
 const img = document.getElementById("img-question");
@@ -45,7 +46,12 @@ noButton.addEventListener("click", () => {
 });
 
 siButton.addEventListener("click", () => {
-  alert("¡Gracias! 😊");
+  noContainer.classList.toggle("hidden");
+  siContainer.classList.toggle("hidden");
+  // ponerle display none a noContainer y display flex a siContainer
+  // noContainer.style.display = "none";
+  // siContainer.style.display = "flex";
+  console.log("click");
 });
 
 // Dark mode

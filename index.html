@@ -10,13 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <img id="img-question" src="assets/personalized/1.webp" alt="Image">
-  <h1>Quieres ser mi San Valentin?</h1>
-  <div class="btns">
-    <button class="btn-1" id="siBtn">Sí</button>
-    <button class="btn-2" id="noBtn">No</button>
+  <div class="container-no" id="container-no">
+    <img id="img-question" class="img" src="assets/personalized/1.webp" alt="Image">
+    <h1>Quieres ser mi San Valentin?</h1>
+    <div class="btns">
+      <button class="btn-1" id="siBtn">Sí</button>
+      <button class="btn-2" id="noBtn">No</button>
+    </div>
+    <button id="darkModeBtn" class="btn-dark">Oscuridad</button>
   </div>
-  <button id="darkModeBtn" class="btn-dark">Oscuridad</button>
+  <div class="container-si hidden" id="container-si">
+    <img class="img" src="assets/personalized/6.webp" alt="Image">
+    <h1>Okay!! <3</h1>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>
