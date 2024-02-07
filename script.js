@@ -39,6 +39,9 @@ noButton.addEventListener("click", () => {
   noIndex = (noIndex + 1) % noModes.length;
   imgIndex = (imgIndex + 1) % imgModes.length;
   siTextSize += 1;
+  if (siTextSize > 5) {
+    siTextSize += 2;
+  }
   siButton.style.fontSize = `${siTextSize}rem`;
   if (siTextSize > 3) {
     siButton.style.padding = "8px 32px";
