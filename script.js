@@ -32,6 +32,7 @@ const img = document.getElementById("img-question");
 let noIndex = 1;
 let imgIndex = 1;
 let siTextSize = 1;
+let paddingTop = 80; // va a disminuir de 5 en 5
 
 noButton.addEventListener("click", () => {
   noButton.textContent = noModes[noIndex];
@@ -43,6 +44,8 @@ noButton.addEventListener("click", () => {
     siTextSize += 2;
   }
   siButton.style.fontSize = `${siTextSize}rem`;
+  paddingTop -= 5;
+  noContainer.style.paddingTop = `${paddingTop}px`;
   if (siTextSize > 3) {
     siButton.style.padding = "8px 32px";
   }
